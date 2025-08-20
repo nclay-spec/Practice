@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.env
+.venv/
+venv/
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Build artifacts
+build/
+dist/
+.eggs/
+*.egg
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.cursor/
+
+# Vercel
+.vercel/
+
+# Node
+node_modules/
+
+# App data
+tasks.json
+

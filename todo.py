@@ -1,13 +1,14 @@
 import json
 import os
+from typing import Optional
 from flask import Flask, render_template, request, redirect, url_for
 
 
 class TodoApp:
     """Simple Todo application with file persistence."""
 
-    def __init__(self, storage_path: str = "tasks.json") -> None:
-        self.storage_path = storage_path
+    def __init__(self, storage_path: Optional[str] = None) -> None:
+        self.storage_path = storage_path or os.environ.get("TASKS_PATH", "tasks.json")
         self.tasks: list[str] = []
         self.load()
 
